@@ -1,0 +1,43 @@
+.blogHeader {
+    display: block; /* Der Header wird als Flex-Container angezeigt */
+    background-color: #ffe369; /* Hintergrundfarbe des Headers */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%; /* Die Breite des Headers soll 100% der Bildschirmbreite sein */
+}
+
+.blogHeader h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+
+.blogHeader .headerButton {
+    width: 34%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 0;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #ffe369;
+}
+
+.blogHeader .aHeader {
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    color: #333; /* Ändert die Farbe des Links */
+    margin: 0 10px; /* Fügt Platz um den Link hinzu */
+}
+
+.blogHeader nav {
+    position: sticky;
+    top: 0;
+    display: flex; /* Der Header wird als Flex-Container angezeigt */
+    align-items: center; /* Die Elemente im Header werden vertikal zentriert */
+    border-top: 1px solid #000;
+}

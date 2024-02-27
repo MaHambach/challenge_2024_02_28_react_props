@@ -1,0 +1,77 @@
+.blogMain {
+    margin-top: 16px;
+}
+
+/*.blogMain .divBlog-post {
+    background-color: #eeeeee;
+    border: 2px solid #000;
+    margin: 0 10px 20px 10px;
+    padding: 20px;
+    border-radius: 20px; /* Rundet alle vier Ecken um 10 Pixel */
+/*}*/
+
+
+
+
+.blogMain .divText {
+    flex: 1; /* Der Text nimmt den verfügbaren Platz ein */
+    padding: 20px; /* Fügen Sie Platz um den Text hinzu */
+}
+
+.blogMain .divImage {
+    flex: 1;
+    width: 100%; /* Das Bild nimmt die gesamte Breite des Containers ein */
+    height: auto; /* Die Höhe des Bildes passt sich automatisch an */
+    display: block; /* Das Bild wird als Blockelement angezeigt */
+}
+
+.blogMain .imgBienenBild {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 20px; /* Rundet alle vier Ecken um 10 Pixel */
+}
+
+.blogMain .divTextAndImage {
+    display: flex;
+}
+
+.blogMain .pSource {
+    font-size: 12px;
+    color: #666;
+}
+
+.blogMain .divParagraph {
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+
+/*article-title">{article.title}</h2>
+<p className="article-date">{article.date}</p>
+<p className="article-content">{article.summary}</p>
+<details className="article-details*/
+.blogMain .main-article {
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.blogMain .article-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.blogMain .article-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.blogMain .article-content {
+    font-size: 16px;
+}
