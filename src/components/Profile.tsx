@@ -1,7 +1,7 @@
 import './Profile.css'
 export default function Profile() {
     return (
-        <div className="profile">
+        <main className="profile">
             <h2>Über mich</h2>
             <p>
                 Als leidenschaftlicher Entwickler habe ich eine große Begeisterung für die Erstellung
@@ -14,6 +14,6 @@ export default function Profile() {
                 Trends in der Webentwicklung und arbeite an eigenen Projekten, um meine Fähigkeiten
                 kontinuierlich zu verbessern.
             </p>
-        </div>
+        </main>
     );
 }

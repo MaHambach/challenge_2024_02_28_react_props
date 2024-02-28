@@ -34,13 +34,10 @@ export default function blog():JSX.Element {
 function mainPage(title:string):JSX.Element{
     switch(title) {
         case "BlogMain":
-            console.log(title);
             return <BlogMain/>
         case "Bienenarten":
-            console.log(title);
             return <Bienenarten/>
         case "Profile":
-            console.log(title);
             return <Profile/>
         default:
             return <BlogMain/>

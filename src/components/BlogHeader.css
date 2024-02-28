@@ -5,6 +5,7 @@
     padding: 0;
     text-align: center;
     position: fixed;
+    z-index: 1000;
     top: 0;
     left:0;
     width: 100%; /* Die Breite des Headers soll 100% der Bildschirmbreite sein */
