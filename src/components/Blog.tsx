@@ -16,8 +16,8 @@ and improve it with the new knowledge."
 
 */
 
-export default function blog():JSX.Element {
-    const [page, setPage] = useState<string>("BlogMain");
+export default function Blog():JSX.Element {
+    const [page, setPage] = useState<string>();
 
     function handlePageChange(title:string):void {
         setPage(title);
@@ -26,7 +26,7 @@ export default function blog():JSX.Element {
     return (
         <div className='blog '>
             <BlogHeader blogHeaderFunction={handlePageChange} />
-            {mainPage(page)}
+            {page ? mainPage(page) : mainPage("BlogMain")}
         </div>
     );
 }

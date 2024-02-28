@@ -4,7 +4,7 @@ import Blog from './components/Blog';
 export default function App() {
     return (
         <div>
-            <Blog page={"BlogMain"} />
+            <Blog />
         </div>
     );
 }
