@@ -1,0 +1,32 @@
+/*article-title">{article.title}</h2>
+<p className="article-date">{article.date}</p>
+<p className="article-content">{article.summary}</p>
+<details className="article-details*/
+.blogArticle-article {
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.blogArticle-article .blogArticle-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.blogArticle-article .blogArticle-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.blogArticle-article .blogArticle-content {
+    font-size: 16px;
+}
+
+.blogArticle-article .article-details {
+    font-size: 16px;
+}

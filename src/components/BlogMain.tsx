@@ -1,10 +1,11 @@
 import './BlogMain.css'
+import '../types/BlogArticle';  /* import der TypeScript-Datei für die Datentypen. */
+import BlogArticleList from "./BlogArticleList.tsx";
 export default function blogMain():JSX.Element {
     return (
         <main className="blogMain">
             <div className="divTextAndImage">
                 <div className="divText">
-                    <article>
                         <h2>My Blog</h2>
                         <p>This is my first blog post. I am so excited to share my thoughts with you.</p>
                         <ul>
@@ -14,24 +15,21 @@ export default function blogMain():JSX.Element {
                         </ul>
                         <a href="https://www.example.com">Click here</a> to learn more.
                         <blockquote cite="https://www.example.com">This is a quote from a famous person.</blockquote>
-                    </article>
                 </div>
                 <div className="divImage">
                     <img className="imgBienenBild"
                          src="https://images.freeimages.com/images/large-previews/aed/three-bees-on-sunflower-1337029.jpg"
-                         alt="Three Bees on Sunflower" width="300" height="200"/>
+                         alt="Three Bees on Sunflower"/>
                     <p className="pSource">&copy; "three bees on sunflower" von Krappweis</p>
                 </div>
             </div>
-            <div className="divBlogPosts">
-                {articleHtml(blogArticles)}
-            </div>
+            <BlogArticleList list={sortArticleList(blogArticles)} />
         </main>
     );
 }
 
-function articleHtml(list: BlogArticle[]): JSX.Element[] {
-   list.sort((a:BlogArticle, b:BlogArticle):number => {
+function sortArticleList(list:BlogArticle[]):BlogArticle[]{
+    list.sort((a:BlogArticle, b:BlogArticle):number => {
         // Konvertiere die Datumsspalten in JavaScript Date Objekte
         const dateA:Date = new Date(a.date);
         const dateB:Date = new Date(b.date);
@@ -40,30 +38,9 @@ function articleHtml(list: BlogArticle[]): JSX.Element[] {
         if (dateA > dateB) return -1;
         if (dateA < dateB) return 1;
         return 0;
-    });
-
-    return list.map((article:BlogArticle, index:number) => {
-        return (
-            <article key={index} className={"main-article"}>
-                <h2 className="article-title">{article.title}</h2>
-                <p className="article-date">Veröffentlicht am {article.date.getDate() + "." + (article.date.getMonth()+1) + "."+article.date.getFullYear()}</p>
-                <p className="article-content">{article.summary}</p>
-                <details className="article-details">
-                    {article.text.map((point:string, index:number) => {
-                        return <p key={index}>{point}</p>
-                    })}
-                </details>
-            </article>
-        )
     })
-}
 
-type BlogArticle = {
-    id: number;
-    title: string;
-    date: Date;
-    summary: string;
-    text: string[];
+    return list;
 }
 
 const blogArticles: BlogArticle[] = [
